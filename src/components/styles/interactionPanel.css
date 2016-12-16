@@ -1,0 +1,8 @@
+.panel {
+	width: 350px;
+	height: 600px;
+	float: right;
+	background-color: #fff;
+	box-sizing: border-box;
+	border: 1px solid gray;
+}

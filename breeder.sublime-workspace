@@ -1,0 +1,836 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"turn",
+				"turnCounter"
+			],
+			[
+				"buil",
+				"buildScreen"
+			],
+			[
+				"check",
+				"checkCellStatus"
+			],
+			[
+				"direc",
+				"direcB"
+			],
+			[
+				"dire",
+				"direcA"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"cell",
+				"cellSize"
+			],
+			[
+				"cel",
+				"cellSize"
+			],
+			[
+				"end",
+				"enduranceTrainTwo"
+			],
+			[
+				"hero",
+				"heroChange"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"training",
+				"trainingResults"
+			],
+			[
+				"monster",
+				"monsterXP"
+			],
+			[
+				"mo",
+				"monster"
+			],
+			[
+				"con",
+				"combatSequence"
+			],
+			[
+				"monsterD",
+				"monsterDodgeCalc"
+			],
+			[
+				"contact",
+				"contactID"
+			],
+			[
+				"get",
+				"getDetails"
+			],
+			[
+				"conact",
+				"contactID"
+			],
+			[
+				"addr",
+				"addressEntry"
+			],
+			[
+				"build",
+				"buildForecast"
+			],
+			[
+				"bu",
+				"buildUI"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"padding-",
+				"padding-top"
+			],
+			[
+				"no",
+				"nowFrame"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"backdrop",
+				"backdropMove"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"oppo",
+				"opposite1"
+			],
+			[
+				"light",
+				"lightCycle"
+			],
+			[
+				"re",
+				"redLightOn"
+			],
+			[
+				"redlight",
+				"redLightOff"
+			],
+			[
+				"green",
+				"greenLight"
+			],
+			[
+				"ye",
+				"yellowLight"
+			],
+			[
+				"red",
+				"redLight"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"play",
+				"playing"
+			],
+			[
+				"st",
+				"strict"
+			],
+			[
+				"start",
+				"startGame"
+			],
+			[
+				"ge",
+				"gameSequence"
+			],
+			[
+				"player",
+				"playermove"
+			],
+			[
+				"c",
+				"currentColor"
+			],
+			[
+				"random",
+				"randomChoice"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"s",
+				"sans-serif"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"already",
+				"alreadyWon"
+			],
+			[
+				"bo",
+				"text-bottom"
+			],
+			[
+				"work",
+				"workBreak"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"d",
+				"dDDisplay"
+			],
+			[
+				"cur",
+				"cur	cursor: ${pointer};"
+			],
+			[
+				"Border",
+				"border-left"
+			],
+			[
+				"aja",
+				"ajaxError"
+			],
+			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"streamers",
+				"streamers"
+			],
+			[
+				"ajax",
+				"ajaxCallSuccess"
+			],
+			[
+				"streamer",
+				"streamerString"
+			],
+			[
+				"curr",
+				"currentName"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"quote",
+				"quoteObject"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"zip",
+				"zipSearch"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"it",
+				"itSkills"
+			],
+			[
+				"backgroun",
+				"background-position"
+			],
+			[
+				"window",
+				"windowPosition"
+			],
+			[
+				"im",
+				"imgContainer"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"mee",
+				"meetup_open_events"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"rune",
+				"runeDescription"
+			],
+			[
+				"alp",
+				"alphabetCreation"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"slid",
+				"slideUp"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"tea",
+				"text-align"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"page",
+				"pageX"
+			],
+			[
+				"ha",
+				"halfHeight"
+			],
+			[
+				"half",
+				"halfWidth"
+			],
+			[
+				"pag",
+				"pageY"
+			],
+			[
+				"alpha",
+				"alphabetImage"
+			],
+			[
+				"al",
+				"alphabetRune"
+			],
+			[
+				"alpa",
+				"alphabetImage"
+			],
+			[
+				"too",
+				"tooltip"
+			],
+			[
+				"tool",
+				"tooltip"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"img",
+				"imgString"
+			],
+			[
+				"rig",
+				"border-right"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"FONT",
+				"font-size"
+			],
+			[
+				"liss",
+				"list-style"
+			],
+			[
+				"windo",
+				"windowPosition"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"wind",
+				"windowPosition"
+			],
+			[
+				"ta",
+				"text-align"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"Table",
+				"table-cell"
+			],
+			[
+				"scroll",
+				"scrollToPosition"
+			],
+			[
+				"sc",
+				"scrollToPosition"
+			],
+			[
+				"over",
+				"closeOverlay"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"T",
+				"Tbsp"
+			],
+			[
+				"fi",
+				"firstChoiceName"
+			],
+			[
+				"firstCh",
+				"firstChoiceID"
+			],
+			[
+				"co",
+				"col-sm-1"
+			],
+			[
+				"box",
+				"boxSize"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"table",
+				"table-cell"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 288.0,
+		"selected_items":
+		[
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"",
+				"Color Picker"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Falk/Desktop/Games/main.js",
+		"/C/Users/Falk/Desktop/Games/style.css",
+		"/C/Users/Falk/Desktop/Games/index.html",
+		"/C/Users/Falk/Desktop/mosaic/README",
+		"/C/Users/Falk/Desktop/mosaic/server.js",
+		"/C/Users/Falk/Desktop/mosaic/package.json",
+		"/C/Users/Falk/Desktop/mosaic/js/mosaic.js",
+		"/C/Users/Falk/Desktop/mosaic/js/client.js",
+		"/C/Users/Falk/Desktop/webProjects/test2.js",
+		"/C/Users/Falk/Desktop/webProjects/test2.html",
+		"/C/Users/Falk/Desktop/webProjects/conway/index.html",
+		"/C/Users/Falk/Documents/logo.html",
+		"/C/Users/Falk/Desktop/webProjects/temp/index.html",
+		"/C/Users/Falk/Desktop/webProjects/temp/script.js",
+		"/E/eigene Website/etchasketch/index.html",
+		"/E/AddressBookServer/webroot/index.html",
+		"/E/AddressBookServer/webroot/js/script.js",
+		"/E/HeroTrainer/hero.js",
+		"/E/HeroTrainer/style.css",
+		"/E/HeroTrainer/index.html",
+		"/E/HeroTrainer/training.js",
+		"/E/HeroTrainer/script.js",
+		"/E/eigene Website/index.html",
+		"/E/eigene Website/css/parallax.css",
+		"/E/eigene Website/js/parallax.js",
+		"/E/AddressBookServer/webroot/css/style.css",
+		"/E/FullStackHKUOT/month3-Angular1/week2/conFusion/app/menu.html",
+		"/E/FullStackHKUOT/month3-Angular1/week2/conFusion/app/scripts/app.js",
+		"/E/FullStackHKUOT/month3-Angular1/week1/conFusion/app/dishdetail-falk.html",
+		"/E/FullStackHKUOT/month3-Angular1/week1/conFusion/app/menu.html",
+		"/E/PDXTechEvents/script.js",
+		"/E/FullStackHKUOT/month 2 - frameworks/week4/conFusion/index.html",
+		"/E/AddressBookServer/AddressBookServer.js",
+		"/C/Users/Falk/Desktop/webProjects/keyframes test/keyframes.html",
+		"/C/Users/Falk/Desktop/webProjects/eigene Website/techevents/script.js",
+		"/C/Users/Falk/Desktop/AddressBookServer/AddressBookServer.js",
+		"/E/eleven_weather_app/index.html",
+		"/E/eleven_weather_app/style.css",
+		"/E/eleven_weather_app/script.js",
+		"/E/PDXTechEvents/newstyle.css",
+		"/C/Users/Falk/Desktop/webProjects/test.html",
+		"/C/Users/Falk/Desktop/webProjects/AirDelights test/fragranceHeroes_400985.png",
+		"/C/Users/Falk/Downloads/FalkS..doc",
+		"/C/Users/Falk/Desktop/webProjects/opinellanding",
+		"/C/Users/Falk/Desktop/webProjects/Intersection/script.js",
+		"/C/Users/Falk/Desktop/webProjects/Intersection/style.css",
+		"/C/Users/Falk/Desktop/webProjects/Intersection/index.html",
+		"/C/Users/Falk/Desktop/webProjects/Intersection/testscript.html",
+		"/C/Users/Falk/Desktop/webProjects/parallax.css",
+		"/C/Users/Falk/Desktop/webProjects/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Pomodoro Timer/scriptnew.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Pomodoro Timer/index.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 1 - html css js/matchinggame/script.js",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 1 - html css js/matchinggame/style.css",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 1 - html css js/matchinggame/index.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 1 - html css js/matchinggame/matchinggame.html",
+		"/C/Users/Falk/Desktop/PDXTechEvents-master/newstyle.css",
+		"/C/Users/Falk/Desktop/PDXTechEvents-master/index.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week3/conFusion/index.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week3/conFusion/css/mystyles.css",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week3/conFusion/indexFalk.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week3/conFusion/aboutusaccordion.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week3/conFusion/css/mystyles.css.txt",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week1/conFusion/css/mystyles.css",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week1/conFusion/contactus.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week1/conFusion/aboutus.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week2/conFusion/indexFalk.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week2/conFusion/index.html",
+		"/C/Users/Falk/Documents/GitHub/techevents/script.js",
+		"/C/Users/Falk/Documents/book.html",
+		"/C/Users/Falk/Desktop/Full Stack HKUOT/month 2 - frameworks/week1/conFusion/test.html",
+		"/C/Users/Falk/Documents/GitHub/parallaxWebsite/index.html",
+		"/E/airbnb autocomplete/index.html",
+		"/E/airbnb autocomplete/style.css",
+		"/E/airbnb autocomplete/script.js",
+		"/E/FCC Simon Game/script.js",
+		"/E/FCC Simon Game/style.css",
+		"/E/FCC Simon Game/index.html",
+		"/E/FCC Simon Game/test.js",
+		"/C/Users/Falk/Desktop/achor test/style.css",
+		"/C/Users/Falk/Desktop/achor test/second.html",
+		"/C/Users/Falk/Desktop/achor test/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Simon Game/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Simon Game/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Simon Game/index.html",
+		"/C/Users/Falk/Desktop/parallax website (non git)/scrollanim/index.html",
+		"/C/Users/Falk/Desktop/parallax website (non git)/resnav/index.html",
+		"/C/Users/Falk/Desktop/Gracie/index.html",
+		"/C/Users/Falk/Desktop/Gracie/piano.css",
+		"/C/Users/Falk/AppData/Local/Temp/BNZ.56df361eacbf5/piano.css",
+		"/C/Users/Falk/AppData/Local/Temp/BNZ.56df361eacbf5/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Tic Tac Toe/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Tic Tac Toe/style.css",
+		"/E/FCC Tic Tac Toe/index.html",
+		"/E/FCC Tic Tac Toe/script.js",
+		"/E/FCC Tic Tac Toe/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Tic Tac Toe/index.html",
+		"/C/Users/Falk/Desktop/webProjects/Runes/CSS/stylesheet.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Calculator/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Calculator/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Pomodoro Timer/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Calculator/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Twitch App/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Twitch App/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Twitch App/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Twitch App/test.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Radom Quote/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Weather App/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Weather App/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Weather App/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Wikiviewer/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Wikiviewer/style.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Wikiviewer/index.html",
+		"/C/Users/Falk/Documents/GitHub/techevents/index.html",
+		"/C/Users/Falk/AppData/Local/Temp/BNZ.56c6235f7a13b1/2.svg",
+		"/C/Users/Falk/AppData/Local/Temp/BNZ.56c621dc742b65/1.svg",
+		"/C/xampp/htdocs/fccweatherapp/weathericons.html",
+		"/C/xampp/htdocs/fccweatherapp/weathericons.css",
+		"/C/xampp/htdocs/fccweatherapp/script.js",
+		"/C/xampp/htdocs/fccweatherapp/style.css",
+		"/C/xampp/htdocs/fccweatherapp/index.html",
+		"/C/xampp/htdocs/techevents/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Weather App/weathericons.css",
+		"/C/Users/Falk/Desktop/webProjects/FCC Weather App/weathericons.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Radom Quote/index.html",
+		"/C/Users/Falk/Desktop/webProjects/FCC Radom Quote/style.css",
+		"/C/Users/Falk/Documents/GitHub/parallaxWebsite/etchasketch/scripts/script.js",
+		"/C/Users/Falk/Desktop/webProjects/FCC Tribute Page/style.css"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hex",
+			"array",
+			"givenNumber",
+			"delete it",
+			"addaddre",
+			"addphone",
+			"index",
+			"click",
+			"now",
+			"forecast",
+			"width",
+			"max",
+			"container",
+			"today",
+			"tech",
+			"carou",
+			"loginmo",
+			"reserve",
+			"btn",
+			"bread",
+			"breat",
+			"nav",
+			"already",
+			"bottom",
+			"X",
+			"});",
+			"input",
+			"search",
+			"wptest_",
+			"wptest",
+			"localwp",
+			"200",
+			">\n",
+			"}",
+			".caroussel",
+			"#slider",
+			"fore",
+			"#ccc",
+			"silver",
+			"category",
+			"Geo",
+			"Some information about the Rune and how it pertains to the viewers fate",
+			"tooltipResult",
+			"210px",
+			"instru",
+			"alphabetImage",
+			"background",
+			"tooltipresult",
+			"result",
+			"resu",
+			"theImages",
+			"        ",
+			"html",
+			"before",
+			"section",
+			"\n.",
+			"%;\n",
+			"span",
+			");\n",
+			"overlay",
+			"rune",
+			"runes",
+			"before",
+			"900"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$scope.nameList",
+			"$scope.contactIDNumber",
+			"O",
+			"wp_",
+			"duckie5",
+			"150",
+			"#slider",
+			".caroussel",
+			"#bbb",
+			"#ccc",
+			"<p>Some information about the Rune and how it pertains to the viewers fate.</p>",
+			"findInObject",
+			"tooltipResult",
+			"theRunes",
+			" ",
+			"p"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
