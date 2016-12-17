@@ -5,15 +5,23 @@ import App from './components/App'
 import Farm from './components/farm'
 import Store from './components/store'
 import './index.css'
+import configureStore from './redux/store'
+import { Provider } from 'react-redux'
+import { createNewMonsterForStore } from './components/calculations'
+
+let initialState = {monster: createNewMonsterForStore()}
+
+let store = configureStore(initialState)
 
 ReactDOM.render((
-	<Router history={hashHistory}>
-		<Route path="/" component={App}>
-			<IndexRoute component={Farm}/>
+	<Provider store={store}>
+		<Router history={hashHistory}>
+			<Route path="/" component={App}>
+				<IndexRoute component={Farm}/>
 
-			<Route path="/store" component={Store} />
-		</Route>
-	</Router>
+				<Route path="/store" component={Store} />
+			</Route>
+		</Router>
+	</Provider>
 ), document.getElementById('root')
 )
-

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { wares } from './DataStore'
 import InteractionPanel from './interactionPanel'
 import './styles/store.css'
-import { createStore } from 'redux'
+import { connect } from 'react-redux'
 
 class Store extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Store extends Component {
     this.state = {
       interactionMonster: {}
     }
-  }  
+  }
   handleWaresClick(id) {
     wares.find(monster => {
       if (monster.id === id) {
@@ -21,8 +21,9 @@ class Store extends Component {
   render() {
     return (
       <div>
-      <InteractionPanel interactionData={this.state}/>
+      <InteractionPanel monster={this.props.monster}/>
         {wares.map(currentMonster => {
+          console.log(currentMonster)
           let liClass = ''
           let content = ''
           if (currentMonster.traits) {
@@ -56,4 +57,8 @@ class Store extends Component {
   }
 }
 
-export default Store
+function mapStateToProps(state) {
+  return state
+}
+
+export default connect(mapStateToProps)(Store)
