@@ -3,7 +3,8 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 import Farm from './components/farm'
-import Store from './components/store'
+import Market from './components/market'
+import Breeding from './components/breeding'
 import './index.css'
 import configureStore from './redux/store'
 import { Provider } from 'react-redux'
@@ -18,8 +19,8 @@ ReactDOM.render((
 		<Router history={hashHistory}>
 			<Route path="/" component={App}>
 				<IndexRoute component={Farm}/>
-
-				<Route path="/store" component={Store} />
+				<Route path="/breeding" component={Breeding} />
+				<Route path="/market" component={Market} />
 			</Route>
 		</Router>
 	</Provider>

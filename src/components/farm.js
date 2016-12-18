@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { createStoreOffer } from './calculations'
-import './styles/store.css'
+import './styles/farm.css'
 
 class Farm extends Component {
   render() {
     return (
-      <div>
+      <div className="frame">
         <h3>Farm</h3>
       </div>
     )

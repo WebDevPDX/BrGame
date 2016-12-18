@@ -16,7 +16,7 @@ export const newMonster = function(type, name) {
 	this.level = 0
 	this.price = 0
 	this.traits = getNewTrait()
-	this.image = `images/${type}.jpg`
+	this.image = `/images/${type}.jpg`
 }
 
 export const traits = {
@@ -267,3 +267,4 @@ export const traits = {
 }
 
 export const wares = createStoreOffer(6)
+export const owned = []

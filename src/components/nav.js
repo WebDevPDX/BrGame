@@ -6,7 +6,7 @@ class Nav extends Component {
 	render() {
 		const navbar =	<div>
 							<ul id="townDropdown" className="dropdown-content">
-								<li><Link to="/store">Store</Link></li>
+								<li><Link to="/market">Buy Monsters</Link></li>
 								<li>Library</li>
 								<li>Contractors</li>
 							</ul>
@@ -25,7 +25,7 @@ class Nav extends Component {
 								<div className="nav-wrapper">
 								<ul className="right hide-on-med-and-down">
 									<li><Link to="/">Farm</Link></li>
-									<li><a>Breeding</a></li>
+									<li><Link to="/breeding">Breeding</Link></li>
 									<li>
 										<a className="dropdown-button" href="#!" data-activates="townDropdown">Town
 											<i className="material-icons right">arrow_drop_down</i>

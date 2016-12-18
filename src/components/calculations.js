@@ -153,7 +153,7 @@ export const getNewGender = function(type) {
 			gender = 'male'
 	}
 	return gender
-} 
+}
 
 export const getNewTrait = function() {
 	//find if a trait should be assigned
@@ -184,7 +184,7 @@ export const createStoreOffer = function(amt) {
 	const storeArr = []
 	for (let i = 0; i < amt; i++) {
 		storeArr.push(createNewMonsterForStore())
-	} 
+	}
 	return storeArr
 }
 
@@ -199,4 +199,25 @@ function TraitNewChance() {
 	} else {
 		return null
 	}
+}
+
+export const getBuyPrice = function(monster) {
+  let statsTotal = 0
+  for (let key in monster.stats) {
+    statsTotal += monster.stats[key]
+  }
+  statsTotal *= 15
+  if (monster.traits) {
+    switch (monster.traits.chance) {
+      case 0.04:
+        statsTotal += 500
+        break
+      case 0.02:
+        statsTotal += 900
+        break
+      default:
+        statsTotal += 250
+    }
+  }
+  return statsTotal
 }
