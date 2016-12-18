@@ -1,38 +1,34 @@
-.panel {
+.breeding-panel {
 	width: 350px;
 	height: 600px;
 	float: right;
 	background-color: #fff;
 	box-sizing: border-box;
 	border: 1px solid gray;
+	overflow-y: scroll;
+	font-size: 0.8em;
 }
 
-.panel .details-frame {
+.breeding-panel .details-frame {
 	margin-left: 20px;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
-.panel .price {
+.breeding-panel .breed-them,
+.breeding-panel .cancel {
 	clear: both;
 	float: right;
-	margin-top: 50px;
+	margin-top: 10px;
 	margin-right: 20px;
 }
 
-.panel .buy-this {
-	clear: both;
-	float: right;
-	margin-top: 50px;
-	margin-right: 20px;
-}
-
-.panel img {
-	height: 250px;
+.breeding-panel img {
+	height: 150px;
 	float: right;
 	margin-right: 20px;
 }
 
-.panel .spacer {
+.breeding-panel .spacer {
 	padding : 10px;
 }
 

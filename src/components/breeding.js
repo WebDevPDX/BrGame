@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { owned } from './DataStore'
 import { getBuyPrice } from './calculations'
-import './styles/market.css'
+import './styles/breeding.css'
 
 class Breeding extends Component {
   constructor() {
@@ -13,43 +13,77 @@ class Breeding extends Component {
   handleMonsterClick(id) {
     owned.find(monster => {
       if (monster.id === id) {
-        this.setState({interactionMonster: monster})
+        if (!this.state.breeder1) {
+          this.setState({breeder1: monster})
+        } else {
+          this.setState({breeder2: monster})
+        }
       }
     })
   }
+  handleBreedingClick() {
+    
+  }
   render() {
     //interaction panel
-    const monster = this.state.interactionMonster
-    const displayDetails = () => {
-      if (monster) {
+    const breeder1 = this.state.breeder1
+    const breeder2 = this.state.breeder2
+    const displayDetailsBreeder1 = () => {
+      if (breeder1) {
         return(
           <div className="details-frame">
-            <img src={monster.image} alt={`image of a ${monster.type}`}/>
-            <h5>{monster.name}</h5>
+            <img src={breeder1.image} alt={breeder1.type}/>
+            <h5>{breeder1.name}</h5>
             <ul className="monster-overview">
-              <li className="b">Type: {monster.type}</li>
-              <li className="b">Gender: {monster.gender}</li>
+              <li className="b">Type: {breeder1.type}</li>
+              <li className="b">Gender: {breeder1.gender}</li>
               <li className="spacer"></li>
-              <li className="tab">STR: {monster.stats.str}</li>
-              <li className="tab">DEX: {monster.stats.dex}</li>
-              <li className="tab">CON: {monster.stats.con}</li>
-              <li className="tab">INT: {monster.stats.int}</li>
-              <li className="tab">WIS: {monster.stats.wis}</li>
-              <li className="tab">CHA: {monster.stats.cha}</li>
-              <li className="tab">FER: {monster.stats.fer}</li>
+              <li className="tab">STR: {breeder1.stats.str}</li>
+              <li className="tab">DEX: {breeder1.stats.dex}</li>
+              <li className="tab">CON: {breeder1.stats.con}</li>
+              <li className="tab">INT: {breeder1.stats.int}</li>
+              <li className="tab">WIS: {breeder1.stats.wis}</li>
+              <li className="tab">CHA: {breeder1.stats.cha}</li>
+              <li className="tab">FER: {breeder1.stats.fer}</li>
               <li className="spacer"></li>
-              {monster.traits && <li className="b">TRAIT: {monster.traits.name}</li>}
+              {breeder1.traits && <li className="b">TRAIT: {breeder1.traits.name}</li>}
+              <hr />
             </ul>
-            <button className="btn red price">Price: {getBuyPrice(monster)}</button>
-            <button className="btn purple buy-this" onClick={() => this.handleBuyMonster(monster.id)}>Buy This Monster</button>
+          </div>
+        )
+      }
+    }
+    const displayDetailsBreeder2 = () => {
+      if (breeder2) {
+        return(
+          <div className="details-frame">
+            <img src={breeder2.image} alt={breeder2.type}/>
+            <h5>{breeder2.name}</h5>
+            <ul className="monster-overview">
+              <li className="b">Type: {breeder2.type}</li>
+              <li className="b">Gender: {breeder2.gender}</li>
+              <li className="spacer"></li>
+              <li className="tab">STR: {breeder2.stats.str}</li>
+              <li className="tab">DEX: {breeder2.stats.dex}</li>
+              <li className="tab">CON: {breeder2.stats.con}</li>
+              <li className="tab">INT: {breeder2.stats.int}</li>
+              <li className="tab">WIS: {breeder2.stats.wis}</li>
+              <li className="tab">CHA: {breeder2.stats.cha}</li>
+              <li className="tab">FER: {breeder2.stats.fer}</li>
+              <li className="spacer"></li>
+              {breeder2.traits && <li className="b">TRAIT: {breeder2.traits.name}</li>}
+            </ul>
           </div>
         )
       }
     }
     return (
       <div>
-        <div className="panel">
-          {monster && <div>{displayDetails()}</div>}
+        <div className="breeding-panel">
+          {breeder1 && <div>{displayDetailsBreeder1()}</div>}
+          {breeder2 && <div>{displayDetailsBreeder2()}</div>}
+          {breeder1 && breeder2 && <button className="btn purple breed-them" onClick={() => this.handleBreedingClick(breeder1.id)}>Breed them</button>}
+          {(breeder1 || breeder2) && <button className="btn red cancel">Clear</button>}
         </div>
         {this.state.owned.map(currentMonster => {
           return (
