@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
-import { owned } from './DataStore'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { endTurn } from '../actions/index'
 import './styles/nav.css'
 
 class Nav extends Component {
-	constructor() {
-    super();
-    this.state = {
-    }
-  }
 	render() {
+		console.log(this.props.farm)
+		const season = this.props.farm.season.charAt(0).toUpperCase() + this.props.farm.season.slice(1)
 		const navbar =	<div>
 							<ul id="townDropdown" className="dropdown-content">
 								<li><Link to="/buy">Buy Monsters</Link></li>
@@ -29,7 +28,10 @@ class Nav extends Component {
 							</ul>
 							<nav>
 								<div className="nav-wrapper">
-								<ul className="right hide-on-med-and-down">
+								<a className="brand-logo"><span className="season-year">{season} of {this.props.farm.year}</span></a>
+								<ul className="right">
+									<li><a className="btn" onClick={() => this.props.endTurn(this.props.farm)}>End Turn</a></li>
+									<li><a className="btn yellow black-text">Money: {this.props.farm.money}</a></li>
 									<li><Link to="/">Farm</Link></li>
 									<li><Link to="/breeding">Breeding</Link></li>
 									<li>
@@ -52,4 +54,16 @@ class Nav extends Component {
 	}
 }
 
-export default Nav
+function mapStateToProps(state) {
+	return {
+		farm: state.farm
+	}
+}
+
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({
+		endTurn: endTurn
+	}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav)
