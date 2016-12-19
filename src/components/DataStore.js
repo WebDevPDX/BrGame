@@ -1,4 +1,4 @@
-import { getNewStats, getNewGender, getNewTrait, createStoreOffer } from './calculations'
+import { getNewStats, getNewGender, getNewTrait, createStoreOffer, createOwned } from './calculations'
 
 export const monsterTypes = ['cow','horse','lion','wolf','cat','harpy','bear','unicorn','deer']
 
@@ -17,6 +17,8 @@ export const newMonster = function(type, name) {
 	this.price = 0
 	this.traits = getNewTrait()
 	this.image = `/images/${type}.jpg`
+	this.available = true;
+	this.level = 0
 }
 
 export const traits = {
@@ -267,4 +269,5 @@ export const traits = {
 }
 
 export const wares = createStoreOffer(6)
-export const owned = []
+export const owned = createOwned(4)
+export const money = 1000

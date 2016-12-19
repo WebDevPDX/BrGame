@@ -1,4 +1,4 @@
-import { traits, monsterTypes, fNames, mNames, newMonster } from './DataStore'
+import { traits, monsterTypes, fNames, mNames, newMonster, owned } from './DataStore'
 
 export const randomIntBetween = function(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -188,6 +188,17 @@ export const createStoreOffer = function(amt) {
 	return storeArr
 }
 
+export const createOwned = function(amt) {
+  const ownedArr = []
+	while (ownedArr.length < amt) {
+    const monster = createNewMonsterForStore()
+    if (ownedArr.length < 1 || ownedArr[ownedArr.length-1].gender !== monster.gender) {
+      ownedArr.push(monster)
+    }
+  }
+	return ownedArr
+}
+
 function TraitNewChance() {
 	const chance = Math.random()
 	if (chance <= 0.02) {
@@ -220,4 +231,82 @@ export const getBuyPrice = function(monster) {
     }
   }
   return statsTotal
+}
+
+function createNewMonsterFromBreeding(type) {
+  const name = getNewName(type)
+  return new newMonster(type, name)
+}
+
+function increaseMonsterStat(monst) {
+  const whichStat = randomIntBetween(0,7)
+  switch(whichStat) {
+    case 1:
+      monst.stats.str += 1
+      break
+    case 2:
+      monst.stats.dex += 1
+      break
+    case 3:
+      monst.stats.con += 1
+      break
+    case 4:
+      monst.stats.int += 1
+      break
+    case 5:
+      monst.stats.wis += 1
+      break
+    case 6:
+      monst.stats.cha += 1
+      break
+    default:
+      monst.stats.con += 1
+  }
+}
+
+function checkMonsterLevel(monst) {
+  if (Math.floor(monst.experience / 100) > monst.level) {
+    monst.level += 1
+    for (let i = 0; i < 3; i++) {
+      increaseMonsterStat(monst)
+    }
+  }
+}
+
+export const calcBreedingResult = function(monster1, monster2) {
+  let child = {}
+  let haveChild = false
+  if (monster1.gender !== monster2.gender) {
+    haveChild = randomIntBetween(0, 101) <= monster1.stats.fer + monster2.stats.fer
+  }
+  if (haveChild) {
+    if(Math.random() < 0.5) {
+      child = createNewMonsterFromBreeding(monster1.type)
+    } else {
+      child = createNewMonsterFromBreeding(monster2.type)
+    }
+    child.available = false
+    owned.push(child)
+  }
+  const breederArr = [monster1, monster2]
+  owned.find(monst => {
+    if (monst.id === monster1.id) {
+      monst.available = false
+      monst.experience += 100
+      checkMonsterLevel(monst)
+      if (monst.stats.fer <= 45) {
+        monst.stats.fer += 5
+      }
+    }
+  })
+  owned.find(monst => {
+    if (monst.id === monster2.id) {
+      monst.available = false
+      monst.experience += 100
+      checkMonsterLevel(monst)
+      if (monst.stats.fer <= 45) {
+        monst.stats.fer += 5
+      }
+    }
+  })
 }
