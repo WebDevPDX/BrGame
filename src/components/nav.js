@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
-import { money } from './DataStore'
+import { owned } from './DataStore'
 import './styles/nav.css'
 
 class Nav extends Component {
 	constructor() {
     super();
     this.state = {
-      money,
     }
   }
 	render() {
 		const navbar =	<div>
 							<ul id="townDropdown" className="dropdown-content">
-								<li><Link to="/market">Buy Monsters</Link></li>
+								<li><Link to="/buy">Buy Monsters</Link></li>
 								<li>Library</li>
-								<li>Contracts</li>
+								<li><Link to="/sell">Sell Monsters</Link></li>
 							</ul>
 							<ul id="buildingsDropdown" className="dropdown-content">
 								<li className="sub">Barn</li>
@@ -31,8 +30,6 @@ class Nav extends Component {
 							<nav>
 								<div className="nav-wrapper">
 								<ul className="right hide-on-med-and-down">
-									<li><a className="btn">END TURN</a></li>
-									<li><span className="btn yellow black-text">Money: {this.state.money}</span></li>
 									<li><Link to="/">Farm</Link></li>
 									<li><Link to="/breeding">Breeding</Link></li>
 									<li>

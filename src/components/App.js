@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from './nav'
-import Market from './market'
+import { farm } from './DataStore'
 import './styles/App.css';
 
 class App extends Component {

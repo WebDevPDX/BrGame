@@ -1,4 +1,4 @@
-import { traits, monsterTypes, fNames, mNames, newMonster, owned } from './DataStore'
+import { traits, monsterTypes, fNames, mNames, newMonster, owned, farm } from './DataStore'
 
 export const randomIntBetween = function(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -233,6 +233,32 @@ export const getBuyPrice = function(monster) {
   return statsTotal
 }
 
+export const getSalesPrice = function(monster) {
+  let statsTotal = 0
+  for (let key in monster.stats) {
+    statsTotal += monster.stats[key]
+  }
+  let price = statsTotal *= 10
+  if (monster.traits) {
+    switch (monster.traits.chance) {
+      case 0.04:
+        price += 400
+        break
+      case 0.02:
+        price += 750
+        break
+      default:
+        price += 150
+    }
+  }
+  console.log(price)
+  if (monster.level >= 1) {
+    price += price * (monster.level / 20)
+  }
+  console.log(price)
+  return price
+}
+
 function createNewMonsterFromBreeding(type) {
   const name = getNewName(type)
   return new newMonster(type, name)
@@ -309,4 +335,27 @@ export const calcBreedingResult = function(monster1, monster2) {
       }
     }
   })
+}
+
+export const endTurn = function() {
+  for (let i = 0; i < owned.length; i++) {
+    owned[i].available = true;
+  }
+  switch(farm.season) {
+    case 'spring':
+      farm.season = 'summer'
+      break
+    case 'summer':
+      farm.season = 'autumn'
+      break
+    case 'autumn':
+      farm.season = 'winter'
+      break
+    case 'winter':
+      farm.season = 'spring'
+      farm.year += 1
+      break
+    default:
+      farm.season = 'spring'
+  }
 }

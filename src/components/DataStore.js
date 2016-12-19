@@ -12,7 +12,7 @@ export const newMonster = function(type, name) {
 	this.type = type
 	this.gender = getNewGender(type)
 	this.stats = getNewStats(type)
-	this.experience = null
+	this.experience = 0
 	this.level = 0
 	this.price = 0
 	this.traits = getNewTrait()
@@ -270,4 +270,8 @@ export const traits = {
 
 export const wares = createStoreOffer(6)
 export const owned = createOwned(4)
-export const money = 1000
+export const farm = {
+	money: 1000,
+	season: 'spring',
+	year: 1374
+}

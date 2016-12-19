@@ -118,7 +118,7 @@ class Breeding extends Component {
                 <ul className="monster-overview">
                   <li className="b">Name: {currentMonster.name}</li>
                   <li className="b">Type: {currentMonster.type}</li>
-                  <li className="b">Exp: {currentMonster.exp}</li>
+                  <li className="b">Exp: {currentMonster.experience}</li>
                   <li className="b">Level: {currentMonster.level}</li>
                   <li className="b">Gender: {currentMonster.gender}</li>
                   <li className="spacer"></li>

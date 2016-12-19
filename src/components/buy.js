@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import { wares, owned } from './DataStore'
+import { wares, owned, farm } from './DataStore'
 import { getBuyPrice } from './calculations'
 import './styles/market.css'
 
-class Market extends Component {
+class Buy extends Component {
   constructor() {
     super();
     this.state = {
       wares: wares,
+      money: farm.money,
     }
   }
   handleWaresClick(id) {
@@ -23,11 +24,11 @@ class Market extends Component {
       if (monster.id === id) {
          arrInd = index
          owned.push(monster)
+         farm.money -= getBuyPrice(monster)
       }
     })
     wares.splice(arrInd, 1)
-    this.setState({wares: wares})
-    this.setState({interactionMonster: null})
+    this.setState({wares: wares, interactionMonster: null, money: farm.money})
   }
   render() {
     //interaction panel
@@ -36,7 +37,7 @@ class Market extends Component {
       if (monster) {
         return(
           <div className="details-frame">
-            <img src={monster.image} alt={`image of a ${monster.type}`}/>
+            <img src={monster.image} alt={monster.type}/>
             <h5>{monster.name}</h5>
             <ul className="monster-overview">
               <li className="b">Type: {monster.type}</li>
@@ -52,6 +53,7 @@ class Market extends Component {
               <li className="spacer"></li>
               {monster.traits && <li className="b">TRAIT: {monster.traits.name}</li>}
             </ul>
+            <button className="btn yellow black-text money">Money: {this.state.money}</button>
             <button className="btn red price">Price: {getBuyPrice(monster)}</button>
             <button className="btn purple buy-this" onClick={() => this.handleBuyMonster(monster.id)}>Buy This Monster</button>
           </div>
@@ -89,4 +91,4 @@ class Market extends Component {
   }
 }
 
-export default Market
+export default Buy

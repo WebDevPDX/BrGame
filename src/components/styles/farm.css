@@ -1,5 +1,18 @@
 .frame {
   height: 100%;
-  background-image: url(/images/farm.jpg);
+  /*background-image: url(/images/farm.jpg);*/
   background-size: cover;
+}
+
+.frame h3 {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 55px;
+}
+
+.farm-overview {
+  font-size: 1.4em;
+  color: #fff;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
 }

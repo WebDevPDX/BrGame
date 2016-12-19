@@ -3,17 +3,18 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 import Farm from './components/farm'
-import Market from './components/market'
+import Buy from './components/buy'
 import Breeding from './components/breeding'
+import Sell from './components/sell'
 import './index.css'
-import { createNewMonsterForStore } from './components/calculations'
 
 ReactDOM.render((
 	<Router history={hashHistory}>
 		<Route path="/" component={App}>
 			<IndexRoute component={Farm}/>
 			<Route path="/breeding" component={Breeding} />
-			<Route path="/market" component={Market} />
+			<Route path="/buy" component={Buy} />
+			<Route path="/sell" component={Sell} />
 		</Route>
 	</Router>
 ), document.getElementById('root')

@@ -12,11 +12,18 @@
 	font-size: 1.2em;
 }
 
-.panel .price {
-	clear: both;
+.panel .price,
+.panel .money {
+	clear: right;
 	float: right;
 	margin-top: 50px;
 	margin-right: 20px;
+	font-size: 0.8em;
+	display: inline;
+}
+
+.panel .money {
+	float: left;
 }
 
 .panel .buy-this {
