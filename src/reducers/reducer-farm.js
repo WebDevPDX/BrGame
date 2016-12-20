@@ -6,26 +6,27 @@ const farmStart = {
 
 export default function(state = farmStart, action) {
 	switch (action.type) {
-	case 'TURN_ENDED_FARM':
-		const newFarm = Object.assign({}, action.payload)
-		switch(newFarm.season) {
+		case 'TURN_ENDED_FARM':
+		const clonedFarm = Object.assign({}, action.payload.farm)
+			switch(clonedFarm.season) {
 		    case 'spring':
-		      newFarm.season = 'summer'
+		      clonedFarm.season = 'summer'
 		      break
 		    case 'summer':
-		      newFarm.season = 'autumn'
+		      clonedFarm.season = 'autumn'
 		      break
 		    case 'autumn':
-		      newFarm.season = 'winter'
+		      clonedFarm.season = 'winter'
 		      break
 		    case 'winter':
-		      newFarm.season = 'spring'
-		      newFarm.year += 1
+		      clonedFarm.season = 'spring'
+		      clonedFarm.year += 1
 		      break
 		    default:
-		      newFarm.season = 'spring'
-		}
-		return newFarm
+		      clonedFarm.season = 'spring'
+			}
+			clonedFarm.money -= action.payload.owned.length * 20
+			return clonedFarm
 	}
 	return state
 }

@@ -297,7 +297,10 @@ function checkMonsterLevel(monst) {
   }
 }
 
-export const calcBreedingResult = function(monster1, monster2) {
+export const calcBreedingResult = function(monster1, monster2, owned) {
+  // console.log('m1', monster1)
+  // console.log('m2', monster2)
+  // console.log('owned', owned)
   let child = {}
   let haveChild = false
   if (monster1.gender !== monster2.gender) {
