@@ -6,7 +6,7 @@ const farmStart = {
 
 export default function(state = farmStart, action) {
 	switch (action.type) {
-	case 'TURN_ENDED':
+	case 'TURN_ENDED_FARM':
 		const newFarm = Object.assign({}, action.payload)
 		switch(newFarm.season) {
 		    case 'spring':
