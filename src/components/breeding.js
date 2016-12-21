@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
-import { owned } from './DataStore'
-import { calcBreedingResult } from './calculations'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { breedMonsters } from '../actions/index'
 import './styles/breeding.css'
 
 class Breeding extends Component {
   constructor() {
     super();
     this.state = {
-      owned: owned,
+      breeder1: null,
+      breeder2: null,
     }
   }
   handleMonsterClick(id) {
-    owned.find(monster => {
+    // console.log(id)
+    this.props.owned.find(monster => {
       if (monster.id === id) {
         if (monster.available) {
           if (!this.state.breeder1) {
@@ -28,8 +31,8 @@ class Breeding extends Component {
     }) // END FIND MONSTER COMPARISON
   }
   handleBreedingClick(breeder1,breeder2) {
-    calcBreedingResult(breeder1,breeder2)
-    this.setState({owned, breeder1: null, breeder2: null})
+    this.props.breedMonsters(breeder1, breeder2, this.props.owned)
+    this.setState({breeder1: null, breeder2: null})
   }
   clearBreeder1() {
     this.setState({breeder1: null})
@@ -38,6 +41,7 @@ class Breeding extends Component {
     this.setState({breeder2: null})
   }
   render() {
+    // console.log(this.props.owned)
     //interaction panel
     const breeder1 = this.state.breeder1
     const breeder2 = this.state.breeder2
@@ -101,7 +105,7 @@ class Breeding extends Component {
           {breeder1 && breeder2 && <button className="btn purple breed-them" onClick={() => this.handleBreedingClick(breeder1, breeder2)}>Breed them</button>}
         </div>
         <div className="overview-panel">
-          {this.state.owned.map(currentMonster => {
+          {this.props.owned.map(currentMonster => {
             const frameColor = {backgroundColor: '#fff', border: ''}
             if (!currentMonster.available) {
               frameColor.backgroundColor = '#ccc'
@@ -141,4 +145,18 @@ class Breeding extends Component {
   }
 }
 
-export default Breeding
+function mapStateToProps(state) {
+	return {
+		farm: state.farm,
+		owned: state.owned,
+		wares: state.wares,
+	}
+}
+
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({
+    breedMonsters: breedMonsters
+	}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Breeding)

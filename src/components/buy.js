@@ -1,34 +1,26 @@
 import React, { Component } from 'react'
-import { wares, owned, farm } from './DataStore'
-import { getBuyPrice } from './calculations'
-import './styles/market.css'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { buyMonster } from '../actions/index'
+import { getBuyPrice } from '../reducers/helpers'
+import './styles/buy.css'
 
 class Buy extends Component {
   constructor() {
     super();
     this.state = {
-      wares: wares,
-      money: farm.money,
+      interactionMonster: null,
     }
   }
   handleWaresClick(id) {
-    wares.find(monster => {
+    this.props.wares.find(monster => {
       if (monster.id === id) {
         this.setState({interactionMonster: monster})
       }
     })
   }
-  handleBuyMonster(id) {
-    let arrInd;
-    wares.find((monster, index) => {
-      if (monster.id === id) {
-         arrInd = index
-         owned.push(monster)
-         farm.money -= getBuyPrice(monster)
-      }
-    })
-    wares.splice(arrInd, 1)
-    this.setState({wares: wares, interactionMonster: null, money: farm.money})
+  handleBuyMonster() {
+    this.props.buyMonster(this.state.interactionMonster, this.props.owned, this.props.farm, this.props.wares)
   }
   render() {
     //interaction panel
@@ -53,8 +45,7 @@ class Buy extends Component {
               <li className="spacer"></li>
               {monster.traits && <li className="b">TRAIT: {monster.traits.name}</li>}
             </ul>
-            <button className="btn yellow black-text money">Money: {this.state.money}</button>
-            <button className="btn red price">Price: {getBuyPrice(monster)}</button>
+            <div className="red darken-1 price">Price: {getBuyPrice(monster)}</div>
             <button className="btn purple buy-this" onClick={() => this.handleBuyMonster(monster.id)}>Buy This Monster</button>
           </div>
         )
@@ -65,7 +56,7 @@ class Buy extends Component {
         <div className="panel">
           {monster && <div>{displayDetails()}</div>}
         </div>
-        {this.state.wares.map(currentMonster => {
+        {this.props.wares.map(currentMonster => {
           return (
             <div key={currentMonster.id} className="monster-frame" onClick={() => this.handleWaresClick(currentMonster.id)} style={currentMonster.gender === 'male' ? {backgroundColor: '#4286f4'} : {backgroundColor: '#f44271'}}>
               <ul className="monster-overview">
@@ -91,4 +82,18 @@ class Buy extends Component {
   }
 }
 
-export default Buy
+function mapStateToProps(state) {
+	return {
+		farm: state.farm,
+		owned: state.owned,
+		wares: state.wares,
+	}
+}
+
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({
+    buyMonster: buyMonster
+	}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Buy)
