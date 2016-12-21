@@ -249,12 +249,10 @@ export const getSalesPrice = function(monster) {
         price += 150
     }
   }
-  console.log(price)
   if (monster.level >= 1) {
     price += price * (monster.level / 20)
   }
-  console.log(price)
-  return price
+  return Math.floor(price)
 }
 
 function createNewMonsterFromBreeding(type) {
@@ -316,25 +314,17 @@ export const calcBreedingResult = function(monster1, monster2, owned) {
     owned.push(child)
   }
   const breederArr = [monster1, monster2]
-  owned.find(monst => {
-    if (monst.id === monster1.id) {
-      monst.available = false
-      monst.experience += 100
-      checkMonsterLevel(monst)
-      if (monst.stats.fer <= 45) {
-        monst.stats.fer += 5
+  breederArr.forEach(breeder => {
+    owned.find(monst => {
+      if (monst.id === breeder.id) {
+        monst.available = false
+        monst.experience += 100
+        checkMonsterLevel(monst)
+        if (monst.stats.fer <= 45) {
+          monst.stats.fer += 5
+        }
       }
-    }
-  })
-  owned.find(monst => {
-    if (monst.id === monster2.id) {
-      monst.available = false
-      monst.experience += 100
-      checkMonsterLevel(monst)
-      if (monst.stats.fer <= 45) {
-        monst.stats.fer += 5
-      }
-    }
+    })
   })
 }
 

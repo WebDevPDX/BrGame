@@ -13,9 +13,9 @@ export default function(state = waresStart, action) {
           waresInd = index
         }
       })
-      console.log(waresInd)
       cloned.wares.splice(waresInd, 1)
       return cloned.wares
+    default:
+      return state
   }
-  return state
 }

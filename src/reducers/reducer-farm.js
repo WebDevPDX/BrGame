@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { getBuyPrice } from './helpers'
+import { getBuyPrice, getSalesPrice } from './helpers'
 
 const farmStart = {
 	money: 1000,
@@ -11,30 +11,32 @@ export default function(state = farmStart, action) {
 	const cloned = _.cloneDeep(action.payload)
 	switch (action.type) {
 		case 'TURN_ENDED_FARM':
-		const clonedFarm = Object.assign({}, action.payload.farm)
-			switch(clonedFarm.season) {
+			switch(cloned.farm.season) {
 		    case 'spring':
-		      clonedFarm.season = 'summer'
+		      cloned.farm.season = 'summer'
 		      break
 		    case 'summer':
-		      clonedFarm.season = 'autumn'
+		      cloned.farm.season = 'autumn'
 		      break
 		    case 'autumn':
-		      clonedFarm.season = 'winter'
+		      cloned.farm.season = 'winter'
 		      break
 		    case 'winter':
-		      clonedFarm.season = 'spring'
-		      clonedFarm.year += 1
+		      cloned.farm.season = 'spring'
+		      cloned.farm.year += 1
 		      break
 		    default:
-		      clonedFarm.season = 'spring'
+		      cloned.farm.season = 'spring'
 			}
-			clonedFarm.money -= action.payload.owned.length * 20
-			return clonedFarm
+			cloned.farm.money -= action.payload.owned.length * 20
+			return cloned.farm
 		case 'BUY_MONSTER':
-			console.log(cloned.wares)
 			cloned.farm.money -= getBuyPrice(cloned.monster)
 			return cloned.farm
+		case 'SELL_MONSTER':
+			cloned.farm.money += getSalesPrice(cloned.monster)
+			return cloned.farm
+		default:
+			return state
 	}
-	return state
 }

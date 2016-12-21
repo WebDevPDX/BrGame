@@ -17,6 +17,17 @@ export default function(state = ownedStart, action) {
     case 'BUY_MONSTER':
       cloned.owned.push(cloned.monster)
       return cloned.owned
+    case 'SELL_MONSTER':
+      let ownedInd = null
+      cloned.owned.find((item, index) => {
+        if (cloned.monster.id === item.id) {
+          ownedInd = index
+        }
+      })
+      console.log(cloned.owned)
+      cloned.owned.splice(ownedInd, 1)
+      return cloned.owned
+    default:
+      return state
 	}
-  return state
 }

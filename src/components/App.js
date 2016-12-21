@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import Nav from './nav'
-import { farm } from './DataStore'
 import './styles/App.css';
 
 
@@ -15,4 +15,12 @@ class App extends Component {
   }
 }
 
-export default App
+function mapStateToProps(state) {
+	return {
+		farm: state.farm,
+		owned: state.owned,
+		wares: state.wares,
+	}
+}
+
+export default connect(mapStateToProps)(App)

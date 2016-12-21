@@ -1,3 +1,5 @@
+//TODO consolidate end turn functions
+
 export function endTurnFarm(farm, owned) {
 	return {
 		type: 'TURN_ENDED_FARM',
@@ -31,6 +33,16 @@ export function buyMonster(monster, owned, farm, wares) {
 			owned: owned,
 			farm: farm,
 			wares: wares,
+		}
+	}
+}
+export function sellMonster(monster, owned, farm) {
+	return {
+		type: 'SELL_MONSTER',
+		payload: {
+			monster: monster,
+			owned: owned,
+			farm: farm,
 		}
 	}
 }
