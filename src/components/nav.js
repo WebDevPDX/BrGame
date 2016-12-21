@@ -34,14 +34,10 @@ class Nav extends Component {
 									<li><Link to="/">Farm</Link></li>
 									<li><Link to="/breeding">Breeding</Link></li>
 									<li>
-										<a className="dropdown-button" href="#!" data-activates="townDropdown">Town
-											<i className="material-icons right">arrow_drop_down</i>
-										</a>
+										<a className="dropdown-button" href="#!" data-activates="townDropdown">Town</a>
 									</li>
 									<li>
-										<a className="dropdown-button" href="#!" data-activates="buildingsDropdown">Buildings
-											<i className="material-icons right">arrow_drop_down</i>
-										</a>
+										<a className="dropdown-button" href="#!" data-activates="buildingsDropdown">Buildings</a>
 									</li>
 								</ul>
 								</div>
