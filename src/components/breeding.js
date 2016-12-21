@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { owned } from './DataStore'
-import { calcBreedingResult } from './calculations'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { breedMonsters } from '../actions/index'
@@ -34,7 +32,7 @@ class Breeding extends Component {
   }
   handleBreedingClick(breeder1,breeder2) {
     this.props.breedMonsters(breeder1, breeder2, this.props.owned)
-    this.setState({owned, breeder1: null, breeder2: null})
+    this.setState({breeder1: null, breeder2: null})
   }
   clearBreeder1() {
     this.setState({breeder1: null})

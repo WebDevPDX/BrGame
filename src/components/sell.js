@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { wares, owned, farm } from './DataStore'
 import { getSalesPrice } from './calculations'
-import './styles/market.css'
+import './styles/buy.css'
 
 class Sell extends Component {
   constructor() {

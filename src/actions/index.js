@@ -23,3 +23,14 @@ export function breedMonsters(breeder1, breeder2, owned) {
 		}
 	}
 }
+export function buyMonster(monster, owned, farm, wares) {
+	return {
+		type: 'BUY_MONSTER',
+		payload: {
+			monster: monster,
+			owned: owned,
+			farm: farm,
+			wares: wares,
+		}
+	}
+}
