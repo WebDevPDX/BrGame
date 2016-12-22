@@ -4,7 +4,9 @@ import { getBuyPrice, getSalesPrice } from './helpers'
 const farmStart = {
 	money: 1000,
 	season: 'spring',
-	year: 1374
+	year: 1374,
+	food: 3,
+	medical: 3,
 }
 
 export default function(state = farmStart, action) {
