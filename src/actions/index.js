@@ -46,3 +46,21 @@ export function sellMonster(monster, owned, farm) {
 		}
 	}
 }
+export function updateFoodSetting(val, farm) {
+	return {
+		type: 'CHANGE_FOOD_SETTING',
+		payload: {
+			farm: farm,
+			val: parseInt(val),
+		}
+	}
+}
+export function updateMedicalSetting(val, farm) {
+	return {
+		type: 'CHANGE_MEDICAL_SETTING',
+		payload: {
+			farm: farm,
+			val: parseInt(val),
+		}
+	}
+}

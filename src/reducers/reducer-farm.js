@@ -38,6 +38,12 @@ export default function(state = farmStart, action) {
 		case 'SELL_MONSTER':
 			cloned.farm.money += getSalesPrice(cloned.monster)
 			return cloned.farm
+		case 'CHANGE_FOOD_SETTING':
+			cloned.farm.food = cloned.val
+			return cloned.farm
+		case 'CHANGE_MEDICAL_SETTING':
+			cloned.farm.medical = cloned.val
+			return cloned.farm
 		default:
 			return state
 	}

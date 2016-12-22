@@ -1,19 +1,16 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-// import { sellMonster } from '../actions/index'
+import { updateFoodSetting, updateMedicalSetting } from '../actions/index'
 import './styles/farm.css'
 
 class Farm extends Component {
-  constructor() {
-    super();
-    this.state = {
-    }
-  }
   changeFoodSettings(event) {
-    console.log(event.target.value)
+    this.props.updateFoodSetting(event.target.value, this.props.farm)
   }
-  changeMedSettings() {
-
+  changeMedicalSettings(event) {
+    console.log(event.target.value)
+    this.props.updateMedicalSetting(event.target.value, this.props.farm)
   }
   render() {
     const bgImg = {backgroundImage: `url(/images/${this.props.farm.season}.jpg)`}
@@ -31,21 +28,21 @@ class Farm extends Component {
           <form className="right" action="#">
             <fieldset className="foodSettings">
               <p>Food Quality for Farm</p>
-                <input className="with-gap" name="food" type="radio" id="1" checked={farm.food === 1} onChange={this.changeFoodSettings}/>
-                <label htmlFor="1">Poor</label>
-                <input className="with-gap" name="food" type="radio" id="3" checked={farm.food === 3} onChange={this.changeFoodSettings}/>
-                <label htmlFor="3">Decent</label>
-                <input className="with-gap" name="food" type="radio" id="5" checked={farm.food === 5} onChange={this.changeFoodSettings}/>
-                <label htmlFor="5">Great</label>
+                <input className="with-gap" name="food" type="radio" id="food1" value="1" checked={farm.food === 1} onChange={this.changeFoodSettings.bind(this)} />
+                <label htmlFor="food1">Poor</label>
+                <input className="with-gap" name="food" type="radio" id="food3" value="3" checked={farm.food === 3} onChange={this.changeFoodSettings.bind(this)} />
+                <label htmlFor="food3">Decent</label>
+                <input className="with-gap" name="food" type="radio" id="food5" value="5" checked={farm.food === 5} onChange={this.changeFoodSettings.bind(this)} />
+                <label htmlFor="food5">Great</label>
             </fieldset>
             <fieldset className="medicalSettings">
               <p>Medical Service for Farm</p>
-                <input className="with-gap" name="med" type="radio" id="1" checked={farm.medical === 1} onChange={this.changeMedSettings}/>
-                <label htmlFor="1">Poor</label>
-                <input className="with-gap" name="med" type="radio" id="3" checked={farm.medical === 3} onChange={this.changeMedSettings}/>
-                <label htmlFor="3">Decent</label>
-                <input className="with-gap" name="med" type="radio" id="5"  checked={farm.medical === 5} onChange={this.changeMedSettings}/>
-                <label htmlFor="5">Great</label>
+                <input className="with-gap" name="med" type="radio" id="med1" value="1" checked={farm.medical === 1} onChange={this.changeMedicalSettings.bind(this)} />
+                <label htmlFor="med1">Poor</label>
+                <input className="with-gap" name="med" type="radio" id="med3" value="3" checked={farm.medical === 3} onChange={this.changeMedicalSettings.bind(this)} />
+                <label htmlFor="med3">Decent</label>
+                <input className="with-gap" name="med" type="radio" id="med5" value="5" checked={farm.medical === 5} onChange={this.changeMedicalSettings.bind(this)} />
+                <label htmlFor="med5">Great</label>
             </fieldset>
           </form>
         </div>
@@ -61,5 +58,11 @@ function mapStateToProps(state) {
 		wares: state.wares,
 	}
 }
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({
+    updateFoodSetting: updateFoodSetting,
+    updateMedicalSetting: updateMedicalSetting,
+	}, dispatch)
+}
 
-export default connect(mapStateToProps)(Farm)
+export default connect(mapStateToProps, mapDispatchToProps)(Farm)

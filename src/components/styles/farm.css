@@ -34,3 +34,9 @@ form {
   padding-bottom: 10px;
   padding-left: 10px;
 }
+
+.foodSettings label,
+.medicalSettings label {
+  margin-right: 15px;
+  padding-left: 25px !important;
+}
