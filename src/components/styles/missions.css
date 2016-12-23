@@ -1,0 +1,25 @@
+.mission-list {
+  height: 250px;
+  width: 650px;
+  background-color: #996666;
+}
+
+.mission-frame {
+  width: 120px;
+  height: 250px;
+  float: left;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0 5px;
+}
+
+.mission-frame img {
+  height: 50px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.mission-frame p {
+  font-weight: bold;
+}

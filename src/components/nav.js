@@ -12,6 +12,7 @@ class Nav extends Component {
 							<ul id="townDropdown" className="dropdown-content">
 								<li><Link className="nav-link" to="/buy">Buy Monsters</Link></li>
 								<li><Link className="nav-link" to="/sell">Sell Monsters</Link></li>
+								<li><Link className="nav-link" to="/missions">Contract Office</Link></li>
 								<li><Link className="nav-link" to="/library">Library</Link></li>
 							</ul>
 							<ul id="buildingsDropdown" className="dropdown-content">

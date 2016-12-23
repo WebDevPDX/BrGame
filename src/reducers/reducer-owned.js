@@ -7,7 +7,7 @@ export default function(state = ownedStart, action) {
   const cloned = _.cloneDeep(action.payload)
   switch (action.type) {
   	case 'TURN_ENDED':
-      //console.log(cloned.owned)
+      console.log(cloned.owned)
       cloned.owned.forEach(monst => {
         monst.available = true
       })

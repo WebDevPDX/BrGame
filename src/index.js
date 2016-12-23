@@ -12,6 +12,7 @@ import Buy from './components/buy'
 import Breeding from './components/breeding'
 import Sell from './components/sell'
 import Library from './components/library'
+import Missions from './components/missions'
 import './index.css'
 
 ReactDOM.render((
@@ -23,6 +24,7 @@ ReactDOM.render((
 				<Route path="/buy" component={Buy} />
 				<Route path="/sell" component={Sell} />
 				<Route path="/library" component={Library} />
+				<Route path="/missions" component={Missions} />
 			</Route>
 		</Router>
 	</Provider>
