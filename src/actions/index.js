@@ -1,9 +1,10 @@
-export function endTurn(farm, owned) {
+export function endTurn(farm, owned, wares) {
 	return {
 		type: 'TURN_ENDED',
 		payload: {
 			farm: farm,
-			owned: owned
+			owned: owned,
+			wares: wares,
 		}
 	}
 }

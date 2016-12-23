@@ -9,7 +9,7 @@ class Farm extends Component {
     this.props.updateFoodSetting(event.target.value, this.props.farm)
   }
   changeMedicalSettings(event) {
-    console.log(event.target.value)
+    //console.log(event.target.value)
     this.props.updateMedicalSetting(event.target.value, this.props.farm)
   }
   render() {

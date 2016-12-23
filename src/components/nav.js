@@ -29,7 +29,7 @@ class Nav extends Component {
 								<div className="nav-wrapper">
 								<a className="brand-logo left"><span className="season-year">{season} of {this.props.farm.year}</span></a>
 								<ul className="right">
-									<li><Link to="/" className="btn" onClick={() => {this.props.endTurn(this.props.farm, this.props.owned)}}>End Turn</Link></li>
+									<li><Link to="/" className="btn" onClick={() => {this.props.endTurn(this.props.farm, this.props.owned, this.props.wares)}}>End Turn</Link></li>
 									<li><a className="btn yellow black-text">Money: {this.props.farm.money}</a></li>
 									<li><Link className="nav-link" to="/">Farm</Link></li>
 									<li><Link className="nav-link" to="/breeding">Breeding</Link></li>

@@ -6,6 +6,11 @@ const waresStart = createStoreOffer(6)
 export default function(state = waresStart, action) {
   const cloned = _.cloneDeep(action.payload)
   switch(action.type) {
+    case 'TURN_ENDED':
+      if (cloned.farm.season === 'winter') {
+        cloned.wares = createStoreOffer(6)
+      }
+      return cloned.wares
     case 'BUY_MONSTER':
       let waresInd = null
       cloned.wares.find((item, index) => {
