@@ -12,7 +12,7 @@ const farmStart = {
 export default function(state = farmStart, action) {
 	const cloned = _.cloneDeep(action.payload)
 	switch (action.type) {
-		case 'TURN_ENDED_FARM':
+		case 'TURN_ENDED':
 			switch(cloned.farm.season) {
 		    case 'spring':
 		      cloned.farm.season = 'summer'
@@ -30,7 +30,8 @@ export default function(state = farmStart, action) {
 		    default:
 		      cloned.farm.season = 'spring'
 			}
-			cloned.farm.money -= action.payload.owned.length * 20
+			cloned.farm.money -= action.payload.owned.length * action.payload.farm.food
+			cloned.farm.money -= action.payload.owned.length * action.payload.farm.medical
 			return cloned.farm
 		case 'BUY_MONSTER':
 			cloned.farm.money -= getBuyPrice(cloned.monster)

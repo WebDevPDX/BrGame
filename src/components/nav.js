@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { endTurnFarm, endTurnOwned } from '../actions/index'
+import { endTurn } from '../actions/index'
 import './styles/nav.css'
 
 class Nav extends Component {
@@ -10,9 +10,9 @@ class Nav extends Component {
 		const season = this.props.farm.season.charAt(0).toUpperCase() + this.props.farm.season.slice(1)
 		const navbar =	<div>
 							<ul id="townDropdown" className="dropdown-content">
-								<li><Link to="/buy">Buy Monsters</Link></li>
-								<li>Library</li>
-								<li><Link to="/sell">Sell Monsters</Link></li>
+								<li><Link className="nav-link" to="/buy">Buy Monsters</Link></li>
+								<li><Link className="nav-link" to="/sell">Sell Monsters</Link></li>
+								<li><Link className="nav-link" to="/library">Library</Link></li>
 							</ul>
 							<ul id="buildingsDropdown" className="dropdown-content">
 								<li className="sub">Barn</li>
@@ -29,10 +29,10 @@ class Nav extends Component {
 								<div className="nav-wrapper">
 								<a className="brand-logo left"><span className="season-year">{season} of {this.props.farm.year}</span></a>
 								<ul className="right">
-									<li><Link to="/" className="btn" onClick={() => {this.props.endTurnFarm(this.props.farm, this.props.owned), this.props.endTurnOwned(this.props.owned)}}>End Turn</Link></li>
+									<li><Link to="/" className="btn" onClick={() => {this.props.endTurn(this.props.farm, this.props.owned)}}>End Turn</Link></li>
 									<li><a className="btn yellow black-text">Money: {this.props.farm.money}</a></li>
-									<li><Link to="/">Farm</Link></li>
-									<li><Link to="/breeding">Breeding</Link></li>
+									<li><Link className="nav-link" to="/">Farm</Link></li>
+									<li><Link className="nav-link" to="/breeding">Breeding</Link></li>
 									<li>
 										<a className="dropdown-button" href="#!" data-activates="townDropdown">Town</a>
 									</li>
@@ -59,8 +59,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({
-		endTurnFarm: endTurnFarm,
-		endTurnOwned: endTurnOwned
+		endTurn: endTurn,
 	}, dispatch)
 }
 

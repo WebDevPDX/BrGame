@@ -6,11 +6,12 @@ const ownedStart = createOwned(4)
 export default function(state = ownedStart, action) {
   const cloned = _.cloneDeep(action.payload)
   switch (action.type) {
-  	case 'TURN_ENDED_OWNED':
-      cloned.forEach(monst => {
+  	case 'TURN_ENDED':
+      console.log(cloned.owned)
+      cloned.owned.forEach(monst => {
         monst.available = true
       })
-      return cloned
+      return cloned.owned
     case 'BREED_MONSTERS':
       calcBreedingResult(action.payload.breeder1, action.payload.breeder2, cloned.owned)
       return cloned.owned

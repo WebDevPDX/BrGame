@@ -11,6 +11,7 @@ import Farm from './components/farm'
 import Buy from './components/buy'
 import Breeding from './components/breeding'
 import Sell from './components/sell'
+import Library from './components/library'
 import './index.css'
 
 ReactDOM.render((
@@ -21,6 +22,7 @@ ReactDOM.render((
 				<Route path="/breeding" component={Breeding} />
 				<Route path="/buy" component={Buy} />
 				<Route path="/sell" component={Sell} />
+				<Route path="/library" component={Library} />
 			</Route>
 		</Router>
 	</Provider>

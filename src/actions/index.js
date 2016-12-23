@@ -1,18 +1,10 @@
-//TODO consolidate end turn functions
-
-export function endTurnFarm(farm, owned) {
+export function endTurn(farm, owned) {
 	return {
-		type: 'TURN_ENDED_FARM',
+		type: 'TURN_ENDED',
 		payload: {
 			farm: farm,
 			owned: owned
 		}
-	}
-}
-export function endTurnOwned(owned) {
-	return {
-		type: 'TURN_ENDED_OWNED',
-		payload: owned
 	}
 }
 export function breedMonsters(breeder1, breeder2, owned) {

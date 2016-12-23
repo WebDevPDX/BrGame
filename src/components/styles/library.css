@@ -1,0 +1,86 @@
+.panel-left,
+.panel-middle,
+.panel-right {
+	width: 333px;
+	height: 600px;
+  display: inline-block;
+	float: left;
+	background-color: #fff;
+	box-sizing: border-box;
+	border: 1px solid gray;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.property-button.btn {
+  margin-top: 5px;
+  display: block;
+}
+/*.panel .details-frame {
+	margin-left: 20px;
+	font-size: 1.2em;
+}
+
+.panel .price {
+	clear: left;
+	float: left;
+	padding: 5px 15px;
+	margin-top: 50px;
+	margin-left: 20px;
+	font-size: 1em;
+	border-radius: 3px;
+}
+
+.panel .buy-this {
+	clear: both;
+	float: left;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+.panel img {
+	height: 250px;
+	float: right;
+	margin-right: 20px;
+}
+
+.panel .spacer {
+	padding : 10px;
+}
+
+.monster-frame {
+	width: 130px;
+	height: 280px;
+	box-sizing: border-box;
+	float: left;
+	font-size: 12px;
+	padding: 5px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.monster-frame .spacer {
+	padding: 5px;
+}
+
+.monster-overview {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.b {
+	font-weight: bold;
+}
+
+.tab {
+	padding-left: 10px;
+}
+
+.show {
+	display: auto;
+}
+
+.hide {
+	display: none;
+}*/
