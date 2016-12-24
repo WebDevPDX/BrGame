@@ -98,7 +98,7 @@ class Breeding extends Component {
       }
     }
     return (
-      <div>
+      <div className="breeding-total-frame">
         <div className="breeding-panel">
           {breeder1 && <div>{displayDetailsBreeder1()}</div>}
           {breeder2 && <div>{displayDetailsBreeder2()}</div>}

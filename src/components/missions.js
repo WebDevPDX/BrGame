@@ -45,6 +45,19 @@ class Missions extends Component {
     this.setState({
       selectedMatch: null
     })
+    let currentMissions = []
+    this.props.missions.map(org => {
+      currentMissions.push(org.find(mission => {
+        if (!mission.completed) {
+          return mission
+        }
+      }))
+    })
+    if (currentMissions.length > 0) {
+      this.setState({
+        currentMissions: currentMissions
+      })
+    }
   }
   render() {
     const selectedMatch = this.state.selectedMatch
@@ -76,7 +89,7 @@ class Missions extends Component {
       }
     }
     return (
-      <div>
+      <div className="contracts-total-frame">
         <div className="panel">
           <div className="selected-mission-panel">
             {!_.isEmpty(this.props.picked) &&
@@ -108,7 +121,7 @@ class Missions extends Component {
           <div className="match-details">{displayselectedMatch()}</div>
         </div>
 
-        <div className="mission-list brown lighten-3">
+        <div className="mission-list">
           <h4 className="contract-list-header">Current Monster Contracts</h4>
           {this.state.currentMissions && this.state.currentMissions.map((mission, index) => {
             return (
@@ -122,11 +135,11 @@ class Missions extends Component {
                     }
                     if (key === 'stats') {
                       return (
-                        <li key={key}>
+                        <ul key={key}>
                           {Object.keys(mission.required.stats).map(prop => {
-                            return `${prop}: ${mission.required.stats[prop]}`
+                            return <li>{`${prop}: ${mission.required.stats[prop]}`}</li>
                           })}
-                        </li>
+                        </ul>
                       )
                     }
                   })}

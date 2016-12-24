@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { sellMonster } from '../actions/index'
 import { getSalesPrice } from '../reducers/helpers'
 import './styles/buy.css'
+import './styles/sell.css'
 
 class Sell extends Component {
   constructor() {
@@ -53,7 +54,7 @@ class Sell extends Component {
       }
     }
     return (
-      <div>
+      <div className="sell-total-frame">
         <div className="panel">
           {monster && <div>{displayDetails()}</div>}
         </div>

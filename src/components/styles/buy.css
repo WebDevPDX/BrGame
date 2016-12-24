@@ -1,3 +1,12 @@
+.buy-total-frame {
+	background-image: url(/images/buy.jpg);
+	background-size: cover;
+	background-position: left;
+	width: 1000px;
+	height: 600px;
+	overflow-y: scroll;
+}
+
 .panel {
 	width: 350px;
 	height: 600px;

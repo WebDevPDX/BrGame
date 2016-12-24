@@ -1,3 +1,9 @@
+.breeding-total-frame {
+	background-image: url(/images/breed.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
 .breeding-panel {
 	width: 350px;
 	height: 600px;

@@ -1,0 +1,8 @@
+.sell-total-frame {
+	background-image: url(/images/sell.jpg);
+	background-size: cover;
+	background-position: left;
+	width: 1000px;
+	height: 600px;
+	overflow-y: scroll;
+}

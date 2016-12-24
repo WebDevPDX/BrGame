@@ -52,7 +52,7 @@ class Buy extends Component {
       }
     }
     return (
-      <div>
+      <div className="buy-total-frame">
         <div className="panel">
           {monster && <div>{displayDetails()}</div>}
         </div>

@@ -224,10 +224,18 @@ export default function(state = missions , action) {
       })
       return cloned.missions
     case 'COMPLETE_CONTRACT':
-      const idArr = cloned.missions.picked.id.split('');
-      const faction = idArr[0]
-      const mission = idArr[1]
-      cloned.missions.list[faction].splice(mission, 1)
+      console.log(cloned)
+      const id = cloned.missions.picked.id;
+      console.log(id)
+      cloned.missions.list.forEach((faction, facId) => {
+        faction.forEach((mission, misId) => {
+          if (id === mission.id) {
+            cloned.missions.list[facId].splice(misId, 1)
+            return
+          }
+        })
+      })
+      console.log(cloned.missions.list)
       cloned.missions.matched = []
       cloned.missions.picked = {}
       return cloned.missions
