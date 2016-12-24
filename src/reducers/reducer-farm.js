@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { getBuyPrice, getSalesPrice } from './helpers'
 
 const farmStart = {
-	money: 1000,
+	money: 100,
 	season: 'spring',
 	year: 1374,
 	food: 3,

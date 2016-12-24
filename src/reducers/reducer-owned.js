@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { createOwned, calcBreedingResult } from './helpers.js'
 
-const ownedStart = createOwned(4)
+const ownedStart = createOwned(2)
 
 export default function(state = ownedStart, action) {
   const cloned = _.cloneDeep(action.payload)
