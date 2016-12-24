@@ -18,7 +18,7 @@ class Farm extends Component {
     const farm = this.props.farm
     return (
       <div className="frame" style={bgImg}>
-        <h3 className="white-text">{season} of {this.props.farm.year}</h3>
+        <h3 className="white-text farm-screen-season-header">{season} of {this.props.farm.year}</h3>
         <div className="farm-overview">
           <ul>
             <li className="b">Money: {this.props.farm.money}</li>

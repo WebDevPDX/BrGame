@@ -1,7 +1,10 @@
+.contract-list-header {
+  margin-top: 0;
+}
+
 .mission-list {
-  height: 250px;
+  height: 300px;
   width: 650px;
-  background-color: #996666;
 }
 
 .mission-frame {
@@ -22,4 +25,39 @@
 
 .mission-frame p {
   font-weight: bold;
+}
+
+.selected-mission-panel {
+  padding: 0 10px;
+}
+
+.details-frame-contracts {
+  padding: 0 10px;
+  height: 250px;
+}
+
+.details-frame-contracts img {
+	height: 150px;
+	float: right;
+	margin-right: 20px;
+}
+
+.monster-list {
+  height: 300px;
+  overflow-y: scroll;
+  padding-top: 5px;
+}
+
+.tab-sm {
+  font-size: 0.8em;
+}
+
+.contract-monster-frame {
+  width: 120px;
+  height: 280px;
+  box-sizing: border-box;
+  float: left;
+  font-size: 12px;
+  padding: 5px;
+  margin: 0 5px;
 }

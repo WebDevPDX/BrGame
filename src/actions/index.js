@@ -57,3 +57,24 @@ export function updateMedicalSetting(val, farm) {
 		}
 	}
 }
+export function updatePickedMission(picked, missions, owned) {
+	return {
+		type: 'PICKED_MISSION_UPDATE',
+		payload: {
+			picked: picked,
+			missions: missions,
+			owned: owned,
+		}
+	}
+}
+export function completeContract(monster, owned, missions, farm) {
+	return {
+		type: 'COMPLETE_CONTRACT',
+		payload: {
+			monster: monster,
+			owned: owned,
+			missions: missions,
+			farm: farm,
+		}
+	}
+}

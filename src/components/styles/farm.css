@@ -4,6 +4,10 @@
   background-size: cover;
 }
 
+.farm-screen-season-header {
+  margin-top: 0;
+}
+
 .frame h3 {
   background-color: rgba(0, 0, 0, 0.7);
   height: 55px;

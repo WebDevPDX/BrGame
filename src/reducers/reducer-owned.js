@@ -7,7 +7,6 @@ export default function(state = ownedStart, action) {
   const cloned = _.cloneDeep(action.payload)
   switch (action.type) {
   	case 'TURN_ENDED':
-      console.log(cloned.owned)
       cloned.owned.forEach(monst => {
         monst.available = true
       })
@@ -19,6 +18,7 @@ export default function(state = ownedStart, action) {
       cloned.owned.push(cloned.monster)
       return cloned.owned
     case 'SELL_MONSTER':
+    case 'COMPLETE_CONTRACT':
       let ownedInd = null
       cloned.owned.find((item, index) => {
         if (cloned.monster.id === item.id) {

@@ -45,6 +45,9 @@ export default function(state = farmStart, action) {
 		case 'CHANGE_MEDICAL_SETTING':
 			cloned.farm.medical = cloned.val
 			return cloned.farm
+		case 'COMPLETE_CONTRACT':
+			cloned.farm.money += cloned.missions.picked.reward
+			return cloned.farm
 		default:
 			return state
 	}
