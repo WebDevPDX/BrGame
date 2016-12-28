@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { buyMonster } from '../actions/index'
 import { getBuyPrice } from '../reducers/helpers'
+import MonsterFrame from './monster-frame'
 import './styles/buy.css'
 
 class Buy extends Component {
@@ -58,22 +59,8 @@ class Buy extends Component {
         </div>
         {this.props.wares.map(currentMonster => {
           return (
-            <div key={currentMonster.id} className="monster-frame" onClick={() => this.handleWaresClick(currentMonster.id)} style={currentMonster.gender === 'male' ? {backgroundColor: '#4286f4'} : {backgroundColor: '#f44271'}}>
-              <ul className="monster-overview">
-                <li className="b">Name: {currentMonster.name}</li>
-                <li className="b">Type: {currentMonster.type}</li>
-                <li className="b">Gender: {currentMonster.gender}</li>
-                <li className="spacer"></li>
-                <li className="tab">STR: {currentMonster.stats.str}</li>
-                <li className="tab">DEX: {currentMonster.stats.dex}</li>
-                <li className="tab">CON: {currentMonster.stats.con}</li>
-                <li className="tab">INT: {currentMonster.stats.int}</li>
-                <li className="tab">WIS: {currentMonster.stats.wis}</li>
-                <li className="tab">CHA: {currentMonster.stats.cha}</li>
-                <li className="tab">FER: {currentMonster.stats.fer}</li>
-                <li className="spacer"></li>
-                {currentMonster.traits && <li className="b">TRAIT: {currentMonster.traits.name}</li>}
-              </ul>
+            <div onClick={() => this.handleWaresClick(currentMonster.id)}>
+              <MonsterFrame monster={currentMonster} />
             </div>
           )
         })}

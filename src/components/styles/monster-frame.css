@@ -1,0 +1,31 @@
+.monster-frame {
+	width: 120px;
+	height: 270px;
+	box-sizing: border-box;
+	float: left;
+	font-size: 12px;
+	padding: 5px;
+  margin: 0 5px 20px;
+}
+
+.monster-frame .spacer {
+	padding: 5px;
+}
+
+.monster-frame.disabled {
+	background-color: #ccc;
+}
+
+.monster-overview {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.b {
+	font-weight: bold;
+}
+
+.tab {
+	padding-left: 10px;
+}

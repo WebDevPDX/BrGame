@@ -49,35 +49,6 @@
 	padding : 10px;
 }
 
-.monster-frame {
-	width: 130px;
-	height: 280px;
-	box-sizing: border-box;
-	float: left;
-	font-size: 12px;
-	padding: 5px;
-	margin-right: 20px;
-	margin-bottom: 20px;
-}
-
-.monster-frame .spacer {
-	padding: 5px;
-}
-
-.monster-overview {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.b {
-	font-weight: bold;
-}
-
-.tab {
-	padding-left: 10px;
-}
-
 .show {
 	display: auto;
 }
