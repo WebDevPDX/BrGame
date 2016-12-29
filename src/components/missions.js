@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import _ from 'lodash'
+import MonsterFrame from './monster-frame'
 import { updatePickedMission, completeContract } from '../actions/index'
 import './styles/missions.css'
 
@@ -159,24 +160,8 @@ class Missions extends Component {
                 frameColor.backgroundColor = '#f44271'
               }
               return (
-                <div key={currentMonster.id} className="contract-monster-frame" onClick={() => this.handleMonsterClick(currentMonster.id)} style={frameColor}>
-                  <ul className="monster-overview">
-                    <li className="b">Name: {currentMonster.name}</li>
-                    <li className="b">Type: {currentMonster.type}</li>
-                    <li className="b">Exp: {currentMonster.experience}</li>
-                    <li className="b">Level: {currentMonster.level}</li>
-                    <li className="b">Gender: {currentMonster.gender}</li>
-                    <li className="spacer"></li>
-                    <li className="tab">STR: {currentMonster.stats.str}</li>
-                    <li className="tab">DEX: {currentMonster.stats.dex}</li>
-                    <li className="tab">CON: {currentMonster.stats.con}</li>
-                    <li className="tab">INT: {currentMonster.stats.int}</li>
-                    <li className="tab">WIS: {currentMonster.stats.wis}</li>
-                    <li className="tab">CHA: {currentMonster.stats.cha}</li>
-                    <li className="tab">FER: {currentMonster.stats.fer}</li>
-                    <li className="spacer"></li>
-                    {currentMonster.traits && <li className="b">TRAIT: {currentMonster.traits.name}</li>}
-                  </ul>
+                <div onClick={() => this.handleMonsterClick(currentMonster.id)}>
+                  <MonsterFrame monster={currentMonster} />
                 </div>
               )
             })}
