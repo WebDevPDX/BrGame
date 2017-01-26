@@ -8,7 +8,7 @@ class MonsterFrame extends Component {
 
     }
   }
-  
+
   render() {
     console.log(this.props.monster)
     const monster = this.props.monster
@@ -29,7 +29,7 @@ class MonsterFrame extends Component {
           <li className="tab">CHA: {monster.stats.cha}</li>
           <li className="tab">FER: {monster.stats.fer}</li>
           <li className="spacer"></li>
-          {monster.traits && <li className="b">TRAIT: {monster.traits.name}</li>}
+          {monster.traits[0] && monster.traits.map(trait => <li className="b">TRAIT: {trait.name}</li>)}
         </ul>
       </div>
     )

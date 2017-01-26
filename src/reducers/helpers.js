@@ -1,3 +1,6 @@
+// chrome web summit
+// progressive web apps
+
 export const randomIntBetween = function(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
@@ -169,7 +172,10 @@ export const getNewTrait = function() {
 	const traitNr = randomIntBetween(0, possibleTraits.length-1)
 	const thisTrait = possibleTraits[traitNr]
 	//console.log(traitNr, thisTrait)
-	return traits[thisTrait]
+  //return array of trait Objects
+  const newMonsterTraits = []
+  newMonsterTraits.push(traits[thisTrait])
+	return newMonsterTraits
 }
 
 export const createNewMonsterForStore = function() {
@@ -255,9 +261,22 @@ export const getSalesPrice = function(monster) {
   return Math.floor(price)
 }
 
-function createNewMonsterFromBreeding(type) {
-  const name = getNewName(type)
-  return new newMonster(type, name)
+function getBreedingStats(m1, m2) {
+  const stats = {}
+  Object.getOwnPropertyNames(m1.stats).forEach(key => {
+    stats[key] = Math.floor((m1.stats[key] + m2.stats[key]) / 2)
+  })
+  return stats
+}
+
+function createNewMonsterFromBreeding(m1, m2, type) {
+  // console.log(m1, 'm1')
+  // console.log(m2, 'm2')
+  const childMonsterName = getNewName(type)
+  const childMonster = new newMonster(type, childMonsterName)
+  childMonster.stats = getBreedingStats(m1, m2)
+  console.log(childMonster)
+  return childMonster
 }
 
 function increaseMonsterStat(monst) {
@@ -306,9 +325,9 @@ export const calcBreedingResult = function(monster1, monster2, owned) {
   }
   if (haveChild) {
     if(Math.random() < 0.5) {
-      child = createNewMonsterFromBreeding(monster1.type)
+      child = createNewMonsterFromBreeding(monster1, monster2, monster1.type)
     } else {
-      child = createNewMonsterFromBreeding(monster2.type)
+      child = createNewMonsterFromBreeding(monster1, monster2, monster2.type)
     }
     child.available = false
     owned.push(child)

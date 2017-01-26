@@ -134,7 +134,7 @@ class Breeding extends Component {
                   <li className="tab">CHA: {currentMonster.stats.cha}</li>
                   <li className="tab">FER: {currentMonster.stats.fer}</li>
                   <li className="spacer"></li>
-                  {currentMonster.traits && <li className="b">TRAIT: {currentMonster.traits.name}</li>}
+                    {currentMonster.traits[0] && currentMonster.traits.map(trait => <li className="b">TRAIT: {trait.name}</li>)}
                 </ul>
               </div>
             )
