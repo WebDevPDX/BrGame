@@ -305,11 +305,13 @@ function increaseMonsterStat(monst) {
   }
 }
 
-function checkMonsterLevel(monst) {
-  if (Math.floor(monst.experience / 100) > monst.level) {
-    monst.level += 1
+function checkMonsterLevel(monster) {
+  const xpRequired = (monster.level * 100) + ((monster.level + 1) * 100)
+  console.log(xpRequired)
+  if (monster.experience >= xpRequired) {
+    monster.level += 1
     for (let i = 0; i < 3; i++) {
-      increaseMonsterStat(monst)
+      increaseMonsterStat(monster)
     }
   }
 }
